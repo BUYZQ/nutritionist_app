@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nutritionist_app/auth/login_screen.dart';
 import 'package:nutritionist_app/constants.dart';
+import 'package:nutritionist_app/features/auth/screens/login_screen.dart';
 import 'package:nutritionist_app/widgets/my_button.dart';
 
 class OnboardingScreen extends StatefulWidget {

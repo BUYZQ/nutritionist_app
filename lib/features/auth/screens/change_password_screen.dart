@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:nutritionist_app/auth/change_password_screen.dart';
 import 'package:nutritionist_app/constants.dart';
+import 'package:nutritionist_app/features/auth/screens/otp_screen.dart';
 import 'package:nutritionist_app/widgets/my_button.dart';
 import 'package:nutritionist_app/widgets/my_text_field.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class ChangePasswordScreen extends StatefulWidget {
+  const ChangePasswordScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<ChangePasswordScreen> createState() => _ChangePasswordScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,8 +53,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       children: [
                         Container(
                           padding: EdgeInsets.symmetric(
-                            vertical: 40,
-                            horizontal: 30
+                              vertical: 40,
+                              horizontal: 30
                           ),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(30),
@@ -64,7 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             children: [
                               Text(
                                 textAlign: TextAlign.center,
-                                "Авторизация",
+                                "Изменить пароль",
                                 style: TextStyle(
                                   fontSize: 23,
                                   letterSpacing: 0.2,
@@ -74,38 +74,29 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                               ),
                               SizedBox(height: 50),
-                              MyTextField(
-                                hintText: "Номер телефона",
-                              ),
-                              SizedBox(height: 10),
-                              MyTextField(
-                                hintText: "Индивидуальный пароль",
-                              ),
-                              SizedBox(height: 30),
-                              InkWell(
-                                onTap: navToChangePasswordScreen,
-                                child: Text(
-                                  textAlign: TextAlign.center,
-                                  'Забыли пароль',
-                                  style: TextStyle(
-                                    decoration: TextDecoration.underline,
-                                    decorationColor: Colors.white,
-                                    fontSize: 16,
-                                    letterSpacing: 0.2,
-                                    fontWeight: FontWeight.w700,
-                                    fontFamily: 'ActayWide',
-                                    color: Colors.white
-                                  ),
+                              Text(
+                                textAlign: TextAlign.center,
+                                "Для изменения пароля подтвердите ваш номер телефона",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  letterSpacing: 0.2,
+                                  fontWeight: FontWeight.w700,
+                                  fontFamily: 'ActayWide',
+                                  color: Colors.white,
                                 ),
                               ),
-                              SizedBox(height: 10),
+                              SizedBox(height: 20),
+                              MyTextField(
+                                hintText: "Введите номер телефона",
+                              ),
+                              SizedBox(height: 34),
                               SizedBox(
                                 height: 45,
                                 width: double.infinity,
                                 child: MyButton(
                                   bgColor: Colors.white,
-                                  title: "Войти",
-                                  onPressed: () {},
+                                  title: "Продолжить",
+                                  onPressed: navToOtpScreen,
                                 ),
                               ),
                             ],
@@ -123,11 +114,11 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  void navToChangePasswordScreen() {
+  void navToOtpScreen() {
     Navigator.of(context).push(
-      MaterialPageRoute(builder: (context) {
-        return ChangePasswordScreen();
-      })
+        MaterialPageRoute(builder: (context) {
+          return OtpScreen();
+        })
     );
   }
 }

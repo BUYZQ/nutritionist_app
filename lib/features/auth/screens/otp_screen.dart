@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:nutritionist_app/auth/login_screen.dart';
 import 'package:nutritionist_app/constants.dart';
+import 'package:nutritionist_app/features/auth/screens/login_screen.dart';
 import 'package:nutritionist_app/widgets/my_button.dart';
 import 'package:nutritionist_app/widgets/my_text_field.dart';
 

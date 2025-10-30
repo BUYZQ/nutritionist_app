@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:nutritionist_app/auth/login_screen.dart';
 import 'package:nutritionist_app/constants.dart';
-import 'package:nutritionist_app/onboarding/onboarding_screen.dart';
+import 'package:nutritionist_app/features/onboarding/screens/onboarding_screen.dart';
 
 
 class WelcomeScreen extends StatefulWidget {

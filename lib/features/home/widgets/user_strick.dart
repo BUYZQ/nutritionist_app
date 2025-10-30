@@ -1,0 +1,62 @@
+import 'package:flutter/material.dart';
+import 'package:nutritionist_app/constants.dart';
+
+class UserStrick extends StatelessWidget {
+  const UserStrick({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.grey,
+        borderRadius: BorderRadius.circular(30),
+      ),
+      padding: EdgeInsets.all(20),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            "Ваш\nпрогресс",
+            style: TextStyle(
+              fontSize: 23,
+              letterSpacing: 0.2,
+              fontWeight: FontWeight.w700,
+              fontFamily: 'ActayWide',
+              color: kPrimaryColor,
+            ),
+          ),
+          Stack(
+            children: [
+              SizedBox(
+                width: 80,
+                height: 80,
+                child: CircularProgressIndicator(
+                  value: 1,
+                  strokeWidth: 8,
+                  color: Colors.white,
+                ),
+              ),
+              Positioned(
+                top: 19,
+                left: 19,
+                child: Text(
+                  "7\nдней",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 14,
+                    letterSpacing: 0.2,
+                    fontWeight: FontWeight.w700,
+                    fontFamily: 'ActayWide',
+                    color: kPrimaryColor,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
