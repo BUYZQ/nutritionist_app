@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:horizontal_list_calendar/horizontal_list_calendar.dart';
 import 'package:nutritionist_app/constants.dart';
-import 'package:nutritionist_app/features/home/screens/food_calendar_screen.dart';
+import 'package:nutritionist_app/features/medicine/screens/medicine_calendar_screen.dart';
 
-class CalendarMini extends StatelessWidget {
+class MedicineCalendarMini extends StatelessWidget {
 
   final Color? foreground;
 
-  const CalendarMini({
+  const MedicineCalendarMini({
     super.key,
     this.foreground,
   });
@@ -24,7 +24,7 @@ class CalendarMini extends StatelessWidget {
         onTap: () {
           Navigator.of(context).push(
             MaterialPageRoute(builder: (context) {
-              return FoodCalendarScreen(foreground: foreground);
+              return MedicineCalendarScreen(foreground: foreground);
             }),
           );
         },

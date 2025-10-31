@@ -5,17 +5,17 @@ import 'package:scrollable_clean_calendar/scrollable_clean_calendar.dart';
 import 'package:scrollable_clean_calendar/utils/enums.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class FoodCalendarScreen extends StatefulWidget {
+class WaterCalendarScreen extends StatefulWidget {
 
   final Color? foreground;
 
-  const FoodCalendarScreen({super.key, this.foreground});
+  const WaterCalendarScreen({super.key, this.foreground});
 
   @override
-  State<FoodCalendarScreen> createState() => _FoodCalendarScreenState();
+  State<WaterCalendarScreen> createState() => _WaterCalendarScreenState();
 }
 
-class _FoodCalendarScreenState extends State<FoodCalendarScreen> {
+class _WaterCalendarScreenState extends State<WaterCalendarScreen> {
   final CleanCalendarController _calendarController = CleanCalendarController(
     minDate: DateTime(2025),
     maxDate: DateTime(2050),
@@ -97,7 +97,7 @@ class _FoodCalendarScreenState extends State<FoodCalendarScreen> {
                       Expanded(
                         child: Text(
                           textAlign: TextAlign.center,
-                          "Календарь\nпитания",
+                          "Календарь\nводы",
                           style: TextStyle(
                             fontSize: 22,
                             letterSpacing: 0.2,

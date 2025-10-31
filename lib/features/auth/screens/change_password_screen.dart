@@ -95,6 +95,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                                 width: double.infinity,
                                 child: MyButton(
                                   bgColor: Color(0xffF8F1EA),
+                                  foregroundColor: kPrimaryColor,
                                   title: "Продолжить",
                                   onPressed: navToOtpScreen,
                                 ),

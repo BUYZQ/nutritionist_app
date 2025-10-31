@@ -122,6 +122,7 @@ class _OtpScreenState extends State<OtpScreen> {
                                 height: 45,
                                 width: double.infinity,
                                 child: MyButton(
+                                  foregroundColor: kPrimaryColor,
                                   bgColor: Color(0xffF8F1EA),
                                   title: isConfirmCode ? "Войти" : "Продолжить",
                                   onPressed: confirmCode,

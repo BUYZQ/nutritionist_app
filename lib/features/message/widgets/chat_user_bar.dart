@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:nutritionist_app/constants.dart';
 
-class PersonContainer extends StatelessWidget {
-  const PersonContainer({super.key});
+class ChatUserBar extends StatefulWidget {
+  const ChatUserBar({super.key});
+
+  @override
+  State<ChatUserBar> createState() => _ChatUserBarState();
+}
+
+class _ChatUserBarState extends State<ChatUserBar> {
 
   @override
   Widget build(BuildContext context) {
@@ -21,14 +27,27 @@ class PersonContainer extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         child: Row(
           children: [
-            Image.asset("assets/auth/person.png", width: 80),
+            Container(
+              decoration: BoxDecoration(
+                color: Color(0xffFEF8F1),
+                borderRadius: BorderRadiusGeometry.circular(40),
+              ),
+              child: IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: Image.asset("assets/home/backward.png", width: 20),
+              ),
+            ),
+            SizedBox(width: 10),
+            Image.asset("assets/users/evgeniya.png", width: 80),
             SizedBox(width: 10),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   textAlign: TextAlign.center,
-                  "Добрый день,",
+                  "Евгения Александровна",
                   style: TextStyle(
                     fontSize: 13,
                     letterSpacing: 0.2,
@@ -39,7 +58,7 @@ class PersonContainer extends StatelessWidget {
                 ),
                 Text(
                   textAlign: TextAlign.center,
-                  "Ульяна Владимировна",
+                  "Был(а) в сети в 15:30",
                   style: TextStyle(
                     fontSize: 13,
                     letterSpacing: 0.2,
@@ -49,32 +68,6 @@ class PersonContainer extends StatelessWidget {
                   ),
                 ),
               ],
-            ),
-            SizedBox(width: 10),
-            Material(
-              color: Color(0xffFEF8F1),
-              borderRadius:  BorderRadius.circular(40),
-              child: InkWell(
-                onTap: () {},
-                borderRadius: BorderRadius.circular(40),
-                child: Container(
-                  padding: EdgeInsets.all(10),
-                  child: Image.asset("assets/home/notification.png", width: 25),
-                ),
-              ),
-            ),
-            SizedBox(width: 10),
-            Material(
-              color: Color(0xffFEF8F1),
-              borderRadius:  BorderRadius.circular(40),
-              child: InkWell(
-                onTap: () {},
-                borderRadius: BorderRadius.circular(40),
-                child: Container(
-                  padding: EdgeInsets.all(10),
-                  child: Image.asset("assets/home/settings.png", width: 25),
-                ),
-              ),
             ),
           ],
         ),

@@ -106,6 +106,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 width: double.infinity,
                                 child: MyButton(
                                   bgColor: Color(0xffF8F1EA),
+                                  foregroundColor: kPrimaryColor,
                                   title: "Войти",
                                   onPressed: navToRootScreen,
                                 ),

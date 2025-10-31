@@ -6,12 +6,14 @@ class MyButton extends StatelessWidget {
   final String title;
   final VoidCallback onPressed;
   final Color? bgColor;
+  final Color? foregroundColor;
 
   const MyButton({
     super.key,
     required this.title,
     required this.onPressed,
     this.bgColor,
+    this.foregroundColor = Colors.white,
   });
 
   @override
@@ -19,7 +21,7 @@ class MyButton extends StatelessWidget {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         backgroundColor: bgColor == null ? kPrimaryColor : bgColor!,
-        foregroundColor: bgColor == null ? Colors.white : kPrimaryColor,
+        foregroundColor: foregroundColor ?? kPrimaryColor,
       ),
       onPressed: onPressed,
       child: Text(

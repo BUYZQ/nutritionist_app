@@ -16,7 +16,7 @@ class MyListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      tileColor: Color(0xffF8F1EA),
+      tileColor: Color(0xffFEF8F1),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadiusGeometry.circular(40),
       ),
@@ -40,16 +40,10 @@ class MyListTile extends StatelessWidget {
           color: kPrimaryColor,
         ),
       ),
-      trailing: Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(40),
-        ),
-        child: IconButton(
-          onPressed: onTap,
-          icon: Image.asset("assets/home/add.png"),
-        ),
-      )
+      trailing: IconButton(
+        onPressed: onTap,
+        icon: Image.asset("assets/home/add.png"),
+      ),
     );
   }
 }

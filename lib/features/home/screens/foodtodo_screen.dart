@@ -50,7 +50,7 @@ class _FoodTodoScreenState extends State<FoodTodoScreen> {
                   final todo = _todos[index];
                   return Container(
                     decoration: BoxDecoration(
-                      color: Color(0xffF8F1EA),
+                      color: Color(0xffFEF8F1),
                       borderRadius: BorderRadius.circular(40),
                     ),
                     padding: const EdgeInsets.all(20),
@@ -103,15 +103,11 @@ class _FoodTodoScreenState extends State<FoodTodoScreen> {
                 },
               ),
             ),
-            FloatingActionButton(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(40),
-              ),
-              backgroundColor: Color(0xffF8F1EA),
-              onPressed: _openAddTodoDialog,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.asset('assets/home/add.png'),
+            SizedBox(
+              width: 200,
+              child: MyButton(
+                title: "Добавить",
+                onPressed: _openAddTodoDialog,
               ),
             ),
             const SizedBox(height: 20),
@@ -159,7 +155,7 @@ class _TodoBottomBarState extends State<TodoBottomBar> {
   @override
   Widget build(BuildContext context) {
     return Dialog(
-      backgroundColor: Color(0xffF8F1EA),
+      backgroundColor: Color(0xffFEF8F1),
       insetPadding:
       const EdgeInsets.only(top: 170, left: 20, right: 20, bottom: 20),
       shape: RoundedRectangleBorder(

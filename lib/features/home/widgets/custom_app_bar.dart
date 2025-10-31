@@ -29,7 +29,7 @@ class CustomAppBar extends StatelessWidget {
           Row(
             children: [
               Material(
-                color: Color(0xffF8F1EA),
+                color: Color(0xffFEF8F1),
                 borderRadius: BorderRadius.circular(40),
                 child: InkWell(
                   onTap: () {

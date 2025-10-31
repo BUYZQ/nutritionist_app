@@ -2,15 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:nutritionist_app/constants.dart';
 
 class UserStrick extends StatelessWidget {
+
+  final Color? background;
+  final Color? foreground;
+
   const UserStrick({
     super.key,
+    this.background,
+    this.foreground,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Color(0xffDBF2B7),
+        color: background ?? Color(0xffFEF8F1),
         borderRadius: BorderRadius.circular(30),
       ),
       padding: EdgeInsets.all(20),
@@ -35,7 +41,7 @@ class UserStrick extends StatelessWidget {
                 child: CircularProgressIndicator(
                   value: 1,
                   strokeWidth: 8,
-                  color: Color(0xff3E8A35),
+                  color: foreground ?? Color(0xff3E8A35),
                 ),
               ),
               Positioned(
