@@ -50,12 +50,13 @@ class _FoodTodoScreenState extends State<FoodTodoScreen> {
                   final todo = _todos[index];
                   return Container(
                     decoration: BoxDecoration(
-                      color: Colors.grey.shade300,
-                      borderRadius: BorderRadius.circular(30),
+                      color: Color(0xffF8F1EA),
+                      borderRadius: BorderRadius.circular(40),
                     ),
-                    padding: const EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(20),
                     margin: const EdgeInsets.symmetric(vertical: 8),
                     child: ListTile(
+                      contentPadding: EdgeInsets.all(0),
                       title: Text(
                         todo.title,
                         style: const TextStyle(
@@ -106,7 +107,7 @@ class _FoodTodoScreenState extends State<FoodTodoScreen> {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(40),
               ),
-              backgroundColor: Colors.grey.shade400,
+              backgroundColor: Color(0xffF8F1EA),
               onPressed: _openAddTodoDialog,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -158,6 +159,7 @@ class _TodoBottomBarState extends State<TodoBottomBar> {
   @override
   Widget build(BuildContext context) {
     return Dialog(
+      backgroundColor: Color(0xffF8F1EA),
       insetPadding:
       const EdgeInsets.only(top: 170, left: 20, right: 20, bottom: 20),
       shape: RoundedRectangleBorder(

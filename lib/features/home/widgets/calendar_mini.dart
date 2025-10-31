@@ -13,7 +13,7 @@ class CalendarMini extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: Colors.grey,
+        color: Color(0xffF8F1EA),
         borderRadius: BorderRadius.circular(30),
       ),
       child: InkWell(
@@ -25,13 +25,15 @@ class CalendarMini extends StatelessWidget {
           );
         },
         child: HorizontalListCalendar(
-          moveToNextMonthIconBackgroundColor: Colors.black,
-          moveToPreviousMonthIconBackgroundColor: Colors.black,
+          moveToPreviousMonthIconBackgroundColor: kPrimaryColor,
+          moveToNextMonthIconBackgroundColor: kPrimaryColor,
+          moveToNextMonthIcon: Icon(Icons.arrow_forward),
+          moveToPreviousMonthIcon: Icon(Icons.arrow_back_outlined),
           todayTextStyle: TextStyle(
             letterSpacing: 0.2,
             fontWeight: FontWeight.w700,
             fontFamily: 'ActayWide',
-            color: kPrimaryColor,
+            color: Colors.white,
             fontSize: 18,
           ),
           unSelectedTextStyle: TextStyle(
@@ -55,8 +57,8 @@ class CalendarMini extends StatelessWidget {
             color: kPrimaryColor,
             fontSize: 18,
           ),
-          selectedColor: Colors.white,
-          todayFillColor: Colors.white,
+          selectedColor: kPrimaryColor,
+          todayFillColor: kPrimaryColor,
           scrollController: ScrollController(),
           onTap: (val) {},
         ),

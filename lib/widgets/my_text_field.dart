@@ -13,7 +13,7 @@ class MyTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Color(0xffF8F1EA),
         borderRadius: BorderRadius.circular(30),
         boxShadow: [
           BoxShadow(

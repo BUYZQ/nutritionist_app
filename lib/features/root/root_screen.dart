@@ -7,20 +7,18 @@ class RootScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
       body: SafeArea(child: FoodScreen()),
       bottomNavigationBar: Container(
-        height: 70,
         decoration: BoxDecoration(
-          color: Colors.grey,
+          color: Colors.white,
           borderRadius: BorderRadius.only(
             topRight: Radius.circular(30),
             topLeft: Radius.circular(30),
           ),
           boxShadow: [
             BoxShadow(
-              color: Colors.white,
-              blurRadius: 4,
+              color: Colors.grey,
+              blurRadius: 5,
             ),
           ],
         ),
@@ -32,19 +30,26 @@ class RootScreen extends StatelessWidget {
           type: BottomNavigationBarType.fixed,
           items: [
             BottomNavigationBarItem(
-              icon: SizedBox(),
+              icon: Image.asset('assets/root/list.png', width: 40),
               label: "",
             ),
             BottomNavigationBarItem(
-              icon: SizedBox(),
+              icon: Image.asset('assets/root/medicine.png', width: 40),
               label: "",
             ),
             BottomNavigationBarItem(
-              icon: SizedBox(),
+              icon: Padding(
+                padding: const EdgeInsets.only(bottom: 10.0),
+                child: Image.asset('assets/root/food.png', width: 50),
+              ),
               label: "",
             ),
             BottomNavigationBarItem(
-              icon: SizedBox(),
+              icon:  Image.asset('assets/root/water.png', width: 40),
+              label: "",
+            ),
+            BottomNavigationBarItem(
+              icon:  Image.asset('assets/root/search.png', width: 40),
               label: "",
             ),
           ],

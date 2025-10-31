@@ -76,11 +76,20 @@ class _FoodCalendarScreenState extends State<FoodCalendarScreen> {
                 children: [
                   Row(
                     children: [
-                      InkWell(
-                        onTap: () {
-                          Navigator.pop(context);
-                        },
-                        child: const Icon(Icons.arrow_back, size: 40),
+                      Material(
+                        color: Color(0xffF8F1EA),
+                        borderRadius: BorderRadius.circular(40),
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                          borderRadius: BorderRadius.circular(40),
+                          child: Container(
+                            height: 60,
+                            width: 60,
+                            child: const Icon(Icons.arrow_back, size: 40),
+                          ),
+                        ),
                       ),
                       Expanded(
                         child: Text(

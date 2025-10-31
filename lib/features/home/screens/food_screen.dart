@@ -10,29 +10,27 @@ class FoodScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        children: [
-          PersonContainer(),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 20.0,
-                vertical: 20,
-              ),
-              child: ListView(
-                children: [
-                  UserStrick(),
-                  SizedBox(height: 10),
-                  CalendarMini(),
-                  SizedBox(height: 10),
-                  FoodTiles(),
-                ],
-              ),
+    return Column(
+      children: [
+        PersonContainer(),
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 20.0,
+              vertical: 20,
+            ),
+            child: ListView(
+              children: [
+                UserStrick(),
+                SizedBox(height: 10),
+                CalendarMini(),
+                SizedBox(height: 10),
+                FoodTiles(),
+              ],
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

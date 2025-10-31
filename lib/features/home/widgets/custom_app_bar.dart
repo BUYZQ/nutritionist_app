@@ -29,19 +29,17 @@ class CustomAppBar extends StatelessWidget {
           Row(
             children: [
               Material(
-                borderRadius: BorderRadiusGeometry.circular(40),
-                color: Colors.grey.shade300,
+                color: Color(0xffF8F1EA),
+                borderRadius: BorderRadius.circular(40),
                 child: InkWell(
-                  borderRadius: BorderRadius.circular(40),
                   onTap: () {
                     Navigator.pop(context);
                   },
+                  borderRadius: BorderRadius.circular(40),
                   child: Container(
-                    padding: EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadiusGeometry.circular(40),
-                    ),
-                    child: const Icon(Icons.arrow_back_outlined, size: 40),
+                    height: 60,
+                    width: 60,
+                    child: const Icon(Icons.arrow_back, size: 40),
                   ),
                 ),
               ),

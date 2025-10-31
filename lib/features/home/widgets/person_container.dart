@@ -52,7 +52,7 @@ class PersonContainer extends StatelessWidget {
             ),
             SizedBox(width: 10),
             Material(
-              color: Colors.grey.shade300,
+              color: Color(0xffF8F1EA),
               borderRadius:  BorderRadius.circular(40),
               child: InkWell(
                 onTap: () {},
@@ -65,7 +65,7 @@ class PersonContainer extends StatelessWidget {
             ),
             SizedBox(width: 10),
             Material(
-              color: Colors.grey.shade300,
+              color: Color(0xffF8F1EA),
               borderRadius:  BorderRadius.circular(40),
               child: InkWell(
                 onTap: () {},

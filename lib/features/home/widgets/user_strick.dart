@@ -10,7 +10,7 @@ class UserStrick extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.grey,
+        color: Color(0xffDBF2B7),
         borderRadius: BorderRadius.circular(30),
       ),
       padding: EdgeInsets.all(20),
@@ -35,7 +35,7 @@ class UserStrick extends StatelessWidget {
                 child: CircularProgressIndicator(
                   value: 1,
                   strokeWidth: 8,
-                  color: Colors.white,
+                  color: Color(0xff3E8A35),
                 ),
               ),
               Positioned(
