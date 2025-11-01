@@ -94,7 +94,7 @@ class _RootScreenState extends State<RootScreen> {
             BottomNavigationBarItem(
               icon:  AnimatedPadding(
                 padding: EdgeInsets.only(bottom: _currentIndex == 4 ? 20.0 : 0),
-                child: Image.asset('assets/root/search.png',  width: _currentIndex == 4 ? 50 : 40),
+                child: Image.asset('assets/root/message.png',  width: _currentIndex == 4 ? 50 : 40),
                 curve: Curves.ease,
                 duration: Duration(milliseconds: 500),
               ),
